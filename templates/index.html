@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animals & Upload — Flask Demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Animals & File Upload</h1>
+
+    <section class="grid">
+      <!-- Box 1: Animal chooser -->
+      <div class="card">
+        <h2>1) Choose an animal</h2>
+        <p class="hint">Select exactly one. We’ll show a local image.</p>
+
+        <div class="checkboxes">
+          <label><input type="radio" name="animal" value="cat"> Cat</label>
+          <label><input type="radio" name="animal" value="dog"> Dog</label>
+          <label><input type="radio" name="animal" value="elephant"> Elephant</label>
+        </div>
+
+        <div id="animal-viewer" class="viewer" aria-live="polite">
+          <img id="animal-img" alt="" />
+          <div id="animal-placeholder">No animal selected</div>
+        </div>
+      </div>
+
+      <!-- Box 2: File upload -->
+      <div class="card">
+        <h2>2) Upload a file</h2>
+        <p class="hint">We’ll respond with its name, size, and type.</p>
+
+        <form id="upload-form">
+          <input id="file-input" type="file" name="file" />
+          <button id="upload-btn" type="submit">Upload</button>
+        </form>
+
+        <div id="drop-zone" class="drop-zone" tabindex="0" aria-label="Drop files here">
+          Drag & Drop here (or click to choose)
+        </div>
+
+        <div id="upload-result" class="result" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Ensure the mapping exists before script.js runs -->
+  <script>
+    window.STATIC_IMAGES = {
+      cat: "{{ url_for('static', filename='images/cat.svg') }}",
+      dog: "{{ url_for('static', filename='images/dog.svg') }}",
+      elephant: "{{ url_for('static', filename='images/elephant.svg') }}"
+    };
+  </script>
+  <!-- Defer so it runs after parsing -->
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>

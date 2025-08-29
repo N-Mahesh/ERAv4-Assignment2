@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="100%" height="100%" fill="#0c1015"/>
+  <g transform="translate(320,240)">
+    <ellipse rx="140" ry="100" fill="#3b82f6"/>
+    <circle cx="-60" cy="-20" r="12" fill="#0c1015"/>
+    <circle cx="60" cy="-20" r="12" fill="#0c1015"/>
+    <rect x="-20" y="-20" width="40" height="140" rx="20" fill="#3b82f6"/>
+    <rect x="-140" y="-30" width="40" height="60" rx="12" fill="#3b82f6"/>
+    <rect x="100" y="-30" width="40" height="60" rx="12" fill="#3b82f6"/>
+  </g>
+  <text x="50%" y="95%" dominant-baseline="middle" text-anchor="middle" fill="#9aa7b6" font-size="24">ELEPHANT</text>
+</svg>

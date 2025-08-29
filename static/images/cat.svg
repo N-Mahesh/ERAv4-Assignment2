@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="100%" height="100%" fill="#0c1015"/>
+  <g transform="translate(320,240)">
+    <circle r="110" fill="#f59e0b"/>
+    <circle cx="-40" cy="-20" r="14" fill="#0c1015"/>
+    <circle cx="40" cy="-20" r="14" fill="#0c1015"/>
+    <path d="M-70 -120 L-30 -70 L-80 -60 Z" fill="#f59e0b"/>
+    <path d="M70 -120 L30 -70 L80 -60 Z" fill="#f59e0b"/>
+    <path d="M-40 30 Q0 60 40 30" stroke="#0c1015" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="50%" y="95%" dominant-baseline="middle" text-anchor="middle" fill="#9aa7b6" font-size="24">CAT</text>
+</svg>

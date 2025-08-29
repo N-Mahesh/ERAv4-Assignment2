@@ -1,0 +1,129 @@
+:root {
+  --bg: #0f1216;
+  --fg: #e8eef6;
+  --muted: #9aa7b6;
+  --card: #161b22;
+  --accent: #3b82f6;
+  --border: #222933;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 { font-size: 1.6rem; margin: 0 0 18px; }
+h2 { font-size: 1.1rem; margin: 0 0 8px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 860px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.hint { color: var(--muted); margin: 0 0 12px; }
+
+.checkboxes {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+.checkboxes label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.viewer {
+  border: 1px dashed var(--border);
+  background: #0c1015;
+  height: 260px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.viewer img {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+}
+#animal-placeholder {
+  color: var(--muted);
+}
+
+#upload-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#file-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0c1015;
+  color: var(--fg);
+}
+#upload-btn {
+  padding: 8px 14px;
+  border: 1px solid var(--accent);
+  color: white;
+  background: var(--accent);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.drop-zone {
+  margin-top: 8px;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  height: 120px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  outline: none;
+  user-select: none;
+}
+.drop-zone.dragover {
+  border-color: var(--accent);
+  color: var(--fg);
+  background: #0f1622;
+}
+
+.result {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #0c1015;
+  border: 1px solid var(--border);
+  min-height: 44px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  white-space: pre-wrap;
+}
+
+.success { border-color: rgba(34,197,94,0.4); }
+.error { border-color: rgba(239,68,68,0.4); }
